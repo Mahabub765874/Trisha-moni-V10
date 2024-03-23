@@ -1,15 +1,14 @@
 module.exports.config = {
-  name: "Bot",
+  name: "88",
   version: "0.0.2",
   permission: 0,
   prefix: false,
   credits: "Nayan",
-  description: "talk with bot",
+  description: "chat with bot",
   category: "user",
-  usages: "",
+  usages: "question",
     cooldowns: 5,
 };
-
 
 var tl = ["      ", "      ", "    ","         ","    ","        ","         ","jang hanga korba","jang bal falaba"];
 
