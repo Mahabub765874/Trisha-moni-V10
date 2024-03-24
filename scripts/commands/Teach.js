@@ -3,7 +3,7 @@ const jimp = require("jimp");
 const fs = require("fs");
 
 module.exports.config = { 
-  name: "teach",
+  name: "teach1",
   version: "0.0.2",
   permission: 0,
   prefix: 'awto',
