@@ -1,5 +1,5 @@
 module.exports.config = {
-name: 'autotime',
+name: 'autotime2',
 version: '10.02',
 hasPermssion: 0,
 credits: 'Biback Das',
