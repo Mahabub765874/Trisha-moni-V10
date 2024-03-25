@@ -19,7 +19,7 @@ module.exports.run = async function({ api, event, args }) {
 
     if (input.length < 2) {
         if (args.length === 0) {
-            return api.sendMessage("Usage: teach [ask] => [answer]", threadID);
+            return api.sendMessage("Follow this steps to add teach on janu.js\n Usage: teach [ask] => [answer]", threadID);
         } else if (args.join(" ").includes("=>")) {
             return api.sendMessage("Please provide both a question and an answer.", threadID);
         } else {
@@ -34,9 +34,9 @@ module.exports.run = async function({ api, event, args }) {
         const response = await axios.get(`http://nl2-4.deploy.sbs:2016/sim?teach=${encodeURIComponent(teachQuery)}&ans=${encodeURIComponent(ansQuery)}`);
 
         if (response.status >= 200 && response.status < 300) {
-            api.sendMessage(`Teaching successful! Question: ${teachQuery}, Answer: ${ansQuery}`, threadID, messageID);
+            api.sendMessage(`Teaching successful on Janu.js! Question: ${teachQuery}, Answer: ${ansQuery}`, threadID, messageID);
         } else {
-            api.sendMessage("An error occurred while teaching.", threadID);
+            api.sendMessage("An error occurred while teaching janu.js! Please try again later.", threadID);
         }
     } catch (error) {
         console.error(error);
