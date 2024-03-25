@@ -22,9 +22,9 @@ module.exports = async ({ api, event }) => {
     },
     reminder: {
       status: true,
-      time: 60, // 60 minutes
+      time: 50, // 50 minutes
       msg: 'বস মাহাবুব সিঙ্গেল 😫🌸\n\nপ্রেম করতে চাইলে ইনবক্সে নক দাও😶👇\n\n m.me/100014754734049\n\n m.me61557597179150\n\n\n বিদ্র: শুধু মেয়েদের জন্য প্রজয্যে 👀✍️ ',
-      note: 'this is a reminder for 40 minutes, you can disabled it by setting the status to false'
+      note: 'this is a reminder for 50 minutes, you can disabled it by setting the status to false'
     },
     autoDeleteCache: {
       status: false,
