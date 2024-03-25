@@ -36,7 +36,7 @@ module.exports.config = {
 
 
                 api.sendMessage({ 
-          body: `📝Your Data Added To Database Successfully\n1️⃣ASK: ${ask}\n2️⃣ANS: ${ans}`
+          body: `📝Your Data Added To Bot.js Database Successfully\n1️⃣ASK: ${ask}\n2️⃣ANS: ${ans}`
                         }, event.threadID);
                       } catch (error) {
                         console.error(error);
