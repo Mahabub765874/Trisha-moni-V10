@@ -30,7 +30,13 @@ const fs = global.nodemodule["fs-extra"];
     "https://drive.google.com/uc?id=1-71QF5wQaQy6N_JFVRYbHeKJxRX6ryXp",
     "https://drive.google.com/uc?id=16BVDbEXqihhNQd2iVmZ4ZXkcvZ-ZtmfJ",
     "https://drive.google.com/uc?id=16UqkKkXtR4ZpF8-GkvgvmdmOkICD9NS5",
-    "https://drive.google.com/uc?id=16UbxxGQ2_PmTVuyWsTDuP4F4uAfxye0C"
+    "https://drive.google.com/uc?id=16UbxxGQ2_PmTVuyWsTDuP4F4uAfxye0C",
+    "https://i.imgur.com/KtJShbH.mp4",
+    "https://i.imgur.com/rq2mHA6.mp4",
+    "https://i.imgur.com/TMIzZxx.mp4",
+    "https://i.imgur.com/S59NBEV.mp4",
+    "https://i.imgur.com/tad0Qma.mp4",
+    "https://i.imgur.com/mAiqLHs.mp4"
 ];
      var callback = () => api.sendMessage({body:`「 ${know} 」`,attachment: fs.createReadStream(__dirname + "/cache/15.mp4")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/15.mp4"));    
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/15.mp4")).on("close",() => callback());
