@@ -13,7 +13,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
 	const { threadID } = event;
 	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
 	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "আহারে চলে গেলা আমাকে ছেড়ে😩" : "Kicked by Administrator";
+	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "তোমাকে ছাড়া আমার ভালো লাগে না 😣" : "Kicked by Administrator";
 	const path = join(__dirname, "nayan", "leaveGif");
 	const gifPath = join(path, `l.gif`);
 	var msg, formPush
