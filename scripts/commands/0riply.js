@@ -14,10 +14,10 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
 	if(react.includes("💋") || react.includes("🥵") || react.includes("hot") || react.includes("I hate you") ||
-     react.includes("bow") || 
+     react.includes("sexy") || 
 react.includes("baby") || react.includes("xan") || react.includes("xanu") || react.includes("sona") ||
 react.includes("xn") ||
-react.includes("xona") || react.includes("xuna") || react.includes("ভালবাসি") ||
+react.includes("xona") || react.includes("xuna") || react.includes("bobs") ||
 react.includes("ব্রেকাপ") ||
 react.includes("break up") ||
 react.includes("sex") ||
@@ -28,7 +28,7 @@ react.includes("🤤")) {
 				body: "- ভালোবাসা নামক আব্লামি করতে মন চাইলে বস মাহাবুব এর ইনবক্স চলে জাও-!!🌚"
 			}
 			api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("😤", event.messageID, (err) => {}, true)
+    api.setMessageReaction("😾", event.messageID, (err) => {}, true)
 		}
 	}
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
