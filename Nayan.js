@@ -22,9 +22,9 @@ module.exports = async ({ api, event }) => {
     },
     reminder: {
       status: true,
-      time: 50, // 50 minutes
+      time: 40, // 40 minutes
       msg: 'বস মাহাবুব সিঙ্গেল 😫🌸\n\nপ্রেম করতে চাইলে ইনবক্সে নক দাও😶👇\n\n m.me/100014754734049\n\n m.me61557597179150\n\n\n বিদ্র: শুধু মেয়েদের জন্য প্রজয্যে 👀✍️ ',
-      note: 'this is a reminder for 50 minutes, you can disabled it by setting the status to false'
+      note: 'this is a reminder for 40 minutes, you can disabled it by setting the status to false'
     },
     autoDeleteCache: {
       status: false,
@@ -38,7 +38,7 @@ module.exports = async ({ api, event }) => {
     },
     accpetPending: {
       status: true,
-      time: 10, // 10 minutes
+      time: 2, // 2 minutes
       note: 'approve waiting messages after a certain time, set the status to false if you want to disable auto accept message request.'
     }
   }
