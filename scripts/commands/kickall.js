@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "kickall",
+  name: "kick",
   version: "1.0.0",
   permission: 2,
   credits: "Khánh Milo",
@@ -10,15 +10,18 @@ module.exports.config = {
   prefix: true
 };
 
-module.exports.run = async function({ api, event, args }) {
-  var threadInfo = await api.getThreadInfo(event.threadID)
-  var id = threadInfo.participantIDs
-  const user = args.join(" ")
-  function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  };
-  for (let user of id) {
-    await delay(5000)
-    api.removeUserFromGroup(user, event.threadID, user);
-  }
-};
+module.exports.run = function({ api, event }) {
+	var mention = Object.keys(event.mentions);
+	return api.getThreadInfo(event.threadID, (err, info) => {
+		if (err) return api.sendMessage("Đã có lỗi xảy ra!",event.threadID);
+		if (!info.adminIDs.some(item => item.id == api.getCurrentUserID())) return api.sendMessage('Need group admin rights\Please add and try again!', event.threadID, event.messageID);
+		if(!mention[0]) return api.sendMessage("You must tag the person to kick",event.threadID);
+		if (info.adminIDs.some(item => item.id == event.senderID)) {
+			for (let o in mention) {
+				setTimeout(() => {
+					api.removeUserFromGroup(mention[o],event.threadID) 
+				},3000)
+			}
+		}
+	})
+      }
