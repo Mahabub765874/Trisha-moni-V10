@@ -17,7 +17,7 @@ module.exports.config = {
 module.exports.handleEvent = async ({ event, api, Users }) => {
   const fs = global.nodemodule["fs-extra"];
   var { threadID, messageID, body, senderID } = event; const thread = global.data.threadData.get(threadID) || {};
-  if (typeof thread["Mahabub"] !== "undefined" && thread["rahat"] == false) return;
+  if (typeof thread["Mahabub"] !== "undefined" && thread["Mahabur"] == false) return;
 
   let name = await Users.getNameUser(event.senderID);
   if (senderID == global.data.botID) return;
@@ -31,33 +31,33 @@ api.setMessageReaction("😻", event.messageID, (err) => {}, true)
 
 ࿐❥ আসসালামু আলাইকুম ! 🥰
 
-࿐❥ 𝑵𝒂𝒎𝒆 :- Khan Rahul RK 🫣😚
+࿐❥ 𝑵𝒂𝒎𝒆 :- 𝗠𝗔𝗛𝗔𝗕𝗨𝗕 𝗥𝗔𝗛𝗠𝗔𝗡 🫣😚
 
-࿐❥ From:- 🌺hacker࿐❥TEAM🌺
+࿐❥ From:- 🌺𝗛𝗔𝗖𝗞𝗘𝗥𝗦࿐❥𝐓𝐞𝐚𝐦🌺
 
-࿐❥ জন্মস্থানঃ সিলেট মৌলভীবাজার, কিন্তু Sreemongal থাকি !
+࿐❥ জন্মস্থানঃ কুন্দগ্ৰাম, আদমদীঘি, বগুড়া, বর্তমান সেখানেই থাকি !
 
-࿐❥ পড়াশোনাঃ (121 পরযন্ত) 😇
+࿐❥ পড়াশোনাঃ (Scc Batch 2024) 😇
 
-࿐❥  আম্মু আব্বুর বড় শয়তান তাহ ! 😅
+࿐❥  পরিবারের ছোট ছেলে  ! 😅
 
-࿐❥ বয়স :22+🙈
+࿐❥ বয়স :17+🙈
 
-࿐❥ Birthday 04/October/......... 🌺
+࿐❥ Birthday 11/February/......... 🌺
 
-࿐❥ উচ্চতা :  5'3" 😷
+࿐❥ উচ্চতা :  5'9" 😷
 
-࿐❥ ব্লাড গ্রুপঃ জানি না🤧
+࿐❥ ব্লাড গ্রুপঃ AB+🤧
 
 ࿐❥ প্রিয় রং : Black /Blue 🥀
 
 ࿐❥ প্রিয় স্থানঃ Facebook / Ludo Game 😘
 
-࿐❥ প্রিয় কাজ : Spamming/Gaming 🥵
+࿐❥ প্রিয় কাজ : Coding/Gaming 🥵
 
-࿐❥ প্রিয় মানুষ : আম্মু/আব্বু//বড় আপু/ছোট ভাই বোন )😘
+࿐❥ প্রিয় মানুষ : আম্মু/আব্বু//বড় ভাই/বড় বোন )😘
 
-◄⃣⃢⃣🌺 ༄Khan Rahul RKシ︎ 🌺⃣⃢⃣►`
+◄⃣⃢⃣🌺 ༄𝐌𝐀𝐇𝐀𝐁𝐔𝐁 𝐑𝐀𝐇𝐌𝐀𝐍シ︎ 🌺⃣⃢⃣►`
   }
   // Gọi bot
   var arr = ["পরিচয়"];
@@ -84,8 +84,8 @@ module.exports.run = async function ({ api, event, Threads, getText }) {
   const { threadID, messageID } = event;
   let data = (await Threads.getData(threadID)).data;
 
-  if (typeof data["rahat"] == "RAHAT" || data["RAHAT"] == true) data["RAHAT"] = false;
-  else data["RAHAT"] = true;
+  if (typeof data["mahabub"] == "MAHABUB" || data["MAHABUB"] == true) data["MAHABUB"] = false;
+  else data["MAHABUB"] = true;
 
   await Threads.setData(threadID, { data });
   global.data.threadData.set(threadID, data);
