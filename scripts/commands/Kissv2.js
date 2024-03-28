@@ -15,7 +15,7 @@ module.exports.config = {
 };
 
 
-	onStart: async function ({ message, event, args, threadsData, api, getLang }) {
+	module.exports.onLoad = function ({ message, event, args, threadsData, api, getLang }) {
 		const adminIDs = await threadsData.get(event.threadID, "adminIDs");
 		if (!adminIDs.includes(api.getCurrentUserID()))
 			return message.reply(getLang("needAdmin"));
